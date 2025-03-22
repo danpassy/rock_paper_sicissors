@@ -1,8 +1,15 @@
+/*
+*	 From Dan BOUSOUGOU
+*	 22/03/2025
+*/
+
 #include <iostream>
 #include <cstdlib> // fonction exit()
 
 using namespace std;
-
+/*
+* Main function of the program
+*/
 int main(){
 
 	cout << "\n===========================================================" << endl;
