@@ -3,7 +3,7 @@
 
 // Compare le choix de l'ordinateur et du joueur pour determiner le gagnant
 // retourne "Player", "Computer", "Draw"
-std::string determineWinner( const std::string& playerchoice, const stdd::string& compueterchoice);
+std::string determineWinner( const std::string& playerchoice, const stdd::string& computerchoice);
 
 //vérifie si l'entrée de l'utilisateur est valide
 // choix valides:
@@ -13,7 +13,7 @@ std::string determineWinner( const std::string& playerchoice, const stdd::string
 bool isValidChoice(const stdd::string& choice);
 
 // Convertit une entrée valide de l'utilisateur en un choix standardis ("Rock", "Paper", "Scissors").
-std::string consertInputTochoice(const std::string& input);
+std::string convertInputTochoice(const std::string& input);
 
 
 
