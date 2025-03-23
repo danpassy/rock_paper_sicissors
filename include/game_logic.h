@@ -3,7 +3,7 @@
 
 // Compare le choix de l'ordinateur et du joueur pour determiner le gagnant
 // retourne "Player", "Computer", "Draw"
-std::string determineWinner( const std::string& playerchoice, const stdd::string& compueterchoice);
+std::string determineWinner( const std::string& playerchoice, const stdd::string& computerchoice);
 
 //vérifie si l'entrée de l'utilisateur est valide
 // choix valides:
