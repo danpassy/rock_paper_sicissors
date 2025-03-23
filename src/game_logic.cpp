@@ -25,3 +25,18 @@ std::string determineWinner( const std::string& playerchoice, const stdd::string
 bool isValidChoice(const stdd::string& choice){
 	return( choice == "Rock" || choice == "rock" choice == "ro" || choice == "RO" || choice == "Ro" ||choice == "r" || choice == "R" || choice == "Paper" || choice == "paper" || choice == "pa" choice == "Pa" || choice == "PA" || choice == "P" || choice == "p" || choice == "Scissors" || choice == "scissors" || choice ==  "Sc" || choice == "SC" choice == "S" || choice == "s") 
 }
+
+
+//Convertit une entrée utilisateur en un choix standardisé ("Rock", "Paper", ou "Scissors").
+std::string convertInputTochoice(const std::string& input){
+	if(input == "Paper" || input == "paper" || input == "PA" || input == "pa" || input == "Pa" ||  input == "P" || input == "p"){
+		return "Paper";
+	}
+	if(input == "Rock" || input == "rock" || input == "RO" || input == "Ro" || input == "ro" || input == "R" || input == "r"){
+		return "Rock";
+	}
+	if(input == "Scissors" || input == "scissors" || input == "SC" || input == "sc" || input == "S" || input == "s"){
+		return "Scissors";
+	}
+	return ""; // retourne une chaine vide si l'entrée est invalide.
+}

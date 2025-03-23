@@ -13,7 +13,7 @@ std::string determineWinner( const std::string& playerchoice, const stdd::string
 bool isValidChoice(const stdd::string& choice);
 
 // Convertit une entrée valide de l'utilisateur en un choix standardis ("Rock", "Paper", "Scissors").
-std::string consertInputTochoice(const std::string& input);
+std::string convertInputTochoice(const std::string& input);
 
 
 
