@@ -53,7 +53,7 @@ int main(){
 				break;
 		}
 
-	}while(choice < 1 || choice > 6);
+	}while(choice !=6);
 
 	return 0;
 }
