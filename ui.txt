@@ -1,0 +1,160 @@
+Here is your improved UI in English with clear structure and professional wording:  
+
+🎮 UI - Console User Interface 
+
+📌 Main Menu
+
+```
+===========================================
+Welcome to the Rock-Paper-Scissors Game!
+===========================================
+```
+
+1. Continue the previous game  
+2. Start a new game  
+3. View registered users  
+4. Delete an existing user  
+5. View game rules  
+6. Exit the game  
+
+```
+Enter your choice (1 to 6):
+> _
+```
+
+
+📌 If the user selects 1 (Continue the previous game):  if no last game, display:
+
+There’s not last game yet, do you want to start a game ? 1. Yes  2. No ( go back to main menu) 3. Exit the game
+
+If last game exists: 
+Displaying the last recorded score:
+
+```
+-----------------------------------
+Last played round:
+You chose: 📄 Paper
+The computer chose: ✂️ Scissors
+
+❌ The computer wins this round!
+Score: Computer 4 - 2 [Player Name]
+-----------------------------------
+```
+
+➡️ Next turn:
+
+If it's the computer's turn:  
+```
+The computer is playing...
+```
+
+If it's the player's turn:  
+```
+It's your turn!
+Please enter your choice:
+  - "Pi", "PI", "pi" or "pI" for ✊ Rock
+  - "Pa", "PA", "pa" or "pA" for 📄 Paper
+  - "C" or "c" for ✂️ Scissors
+
+Your choice:
+> _
+```
+
+❌ If the input is invalid:
+```
+⚠️ Invalid choice! Please try again.
+```
+
+---
+
+🛠️ Score update after each round:
+```
+You chose: 📄 Paper
+The computer chose: ✂️ Scissors
+
+❌ The computer wins this round!
+Score: Computer 5 - 2 [Player Name]
+```
+
+---
+
+🔄 Post-Round Menu:
+```
+What would you like to do next?
+1. Continue this game
+2. Return to the main menu
+3. Exit the game
+
+Your choice:
+> _
+```
+
+---
+
+📌 If the user selects 2 (Start a new game):
+
+```
+Please enter your username:
+> _
+```
+
+➡️ Choosing the first player: 
+```
+Who should play first?
+1. [Player Name]
+2. Computer
+
+Enter your choice (1 or 2):
+> _
+```
+
+❌ If input is invalid: 
+
+```
+⚠️ Invalid choice! Please enter "1" or "2".
+```
+
+
+🎲 Turn-based gameplay (User input):
+If it's the player's turn:  
+```
+It's your turn!
+Please enter your choice:
+  - "Pi", "PI", "pi" or "pI" for ✊ Rock
+  - "Pa", "PA", "pa" or "pA" for 📄 Paper
+  - "C" or "c" for ✂️ Scissors
+
+Your choice:
+> _
+```
+
+❌ If the input is invalid:
+```
+⚠️ Invalid choice! Please enter a valid option.
+```
+
+If it's the computer's turn:  
+```
+The computer is playing...
+```
+
+
+
+🏆 Round result display
+
+Once both players have made their choices:  
+```
+-------------------------------------------------
+You chose: 📄 Paper
+The computer chose: ✂️ Scissors
+
+❌ The computer wins this round!
+Score: Computer 1 - 0 [Player Name]
+-------------------------------------------------
+```
+
+➡️ The score is automatically saved. 
+
+---
+
+This version ensures clarity, smooth navigation, and a professional tone while keeping it user-friendly. 🚀
