@@ -1,3 +1,4 @@
+
 /*
 * 		From Dan BOUSSOUGOU
 * 		   3/04/2025
@@ -18,7 +19,7 @@ std::string getPlayerChoice();
 /*
 *Recupere le nom de l'utilisateur pour une nouvelle partie
 */
-std:string getPlayerName();
+std::string getPlayerName();
 
 
 /*
