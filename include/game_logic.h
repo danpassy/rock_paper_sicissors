@@ -1,6 +1,7 @@
 #ifndef GAME_LOGIC_H
 #define GAME_LOGIC_H
 
+#include <string>
 // Compare le choix de l'ordinateur et du joueur pour determiner le gagnant
 // retourne "Player", "Computer", "Draw"
 std::string determineWinner( const std::string& playerchoice, const stdd::string& computerchoice);
