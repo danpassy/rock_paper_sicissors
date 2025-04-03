@@ -5,7 +5,7 @@
 
 // Compare le choix de l'ordinateur et du joueur pour determiner le gagnant
 // retourne "Player", "Computer", "Draw"
-std::string determineWinner( const std::string& playerchoice, const stdd::string& computerchoice){
+std::string determineWinner( const std::string& playerchoice, const std::string& computerchoice){
 	if( playerChoice == computerChoice) {
 		return "Draw";
 	}
@@ -21,7 +21,7 @@ std::string determineWinner( const std::string& playerchoice, const stdd::string
 // choix valides:
 // pour rock: rock, Rock, RO, ro, R,r
 // pour scissors: scissors, Scissors, Sc, S, s
-// pour paper: Papar, paper, pa PA p, P
+// pour paper: Paper, paper, pa PA p, P
 bool isValidChoice(const stdd::string& choice){
 	return( choice == "Rock" || choice == "rock" choice == "ro" || choice == "RO" || choice == "Ro" ||choice == "r" || choice == "R" || choice == "Paper" || choice == "paper" || choice == "pa" choice == "Pa" || choice == "PA" || choice == "P" || choice == "p" || choice == "Scissors" || choice == "scissors" || choice ==  "Sc" || choice == "SC" choice == "S" || choice == "s") 
 }
