@@ -1,0 +1,5 @@
+if(EXISTS "/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_computer_ai[1]_tests.cmake")
+  include("/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_computer_ai[1]_tests.cmake")
+else()
+  add_test(test_computer_ai_NOT_BUILT test_computer_ai_NOT_BUILT)
+endif()

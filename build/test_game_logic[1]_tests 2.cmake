@@ -1,0 +1,7 @@
+add_test([=[GameLogicTest.DetermineWinner]=]  [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_game_logic]==] [==[--gtest_filter=GameLogicTest.DetermineWinner]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GameLogicTest.DetermineWinner]=]  PROPERTIES WORKING_DIRECTORY [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[GameLogicTest.IsValidChoice]=]  [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_game_logic]==] [==[--gtest_filter=GameLogicTest.IsValidChoice]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GameLogicTest.IsValidChoice]=]  PROPERTIES WORKING_DIRECTORY [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[GameLogicTest.ConvertInputToChoice]=]  [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_game_logic]==] [==[--gtest_filter=GameLogicTest.ConvertInputToChoice]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[GameLogicTest.ConvertInputToChoice]=]  PROPERTIES WORKING_DIRECTORY [==[/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_game_logic_TESTS GameLogicTest.DetermineWinner GameLogicTest.IsValidChoice GameLogicTest.ConvertInputToChoice)
