@@ -1,0 +1,5 @@
+if(EXISTS "/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_score[1]_tests.cmake")
+  include("/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build/test_score[1]_tests.cmake")
+else()
+  add_test(test_score_NOT_BUILT test_score_NOT_BUILT)
+endif()
