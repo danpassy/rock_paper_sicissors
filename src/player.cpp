@@ -41,7 +41,7 @@ std::string getPlayerChoice(){
 *Gère le tour du joueur ( affichage des messages, saisie, validation
 */
 std::string handlePlayerTurn(){
-	std::cout << "\---" <<playerName << "'s Turn ---\n";
+	std::cout << "\---" <<getPlayerName << "'s Turn ---\n";
 	std::cout << " Choose: \n";
 	std::cout << " ✊🏿 Rock: 'Ro', 'Ro', 'RO', 'ro'\n ";
 	std::cout << " 📄 Paper: 'Pa', 'PA', 'pa', 'pA'\n";
@@ -53,10 +53,10 @@ std::string handlePlayerTurn(){
 /*
 * Affiche un message personnlisé pendant le tour du joueur 
 */
-void displayPlayerTurnMessage(const string& playerName) {
-    	cout << "\n===================================\n";
-   	cout << " 🎮  --- " << playerName << "'s turn "<< endl;
-    	cout << "===================================\n";
+void displayPlayerTurnMessage(const std::string& playerName) {
+    	std::cout << "\n===================================\n";
+   	std::cout << " 🎮  --- " << getPlayerName << "'s turn "<< std::endl;
+    	std::cout << "===================================\n";
 }
 
 /*
@@ -71,14 +71,14 @@ int askToContinue(){
 		std::cout << "2. Go back to main menu\n";
 		std::cout << "3. Exit the game\n";
 		std::cout << "\n----------------------------------\n";
-		std::cput << "Enter yout choice : ";
+		std::cout << "Enter yout choice : ";
 		
 		std::cin >> choice;
 		
 		// Management of mistakes 
 		if(std::cin.fail()){
 			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<stdstreamsize>::max(),'n');
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'n');
 			std::cout << "⚠️ Error : Please enter an integer\n";	
 		}
 		else if( choice <1 || choice > 3){

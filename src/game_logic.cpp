@@ -5,12 +5,12 @@
 
 // Compare le choix de l'ordinateur et du joueur pour determiner le gagnant
 // retourne "Player", "Computer", "Draw"
-std::string determineWinner( const std::string& playerchoice, const std::string& computerchoice){
+std::string determineWinner( const std::string& playerChoice, const std::string& computerChoice){
 	if( playerChoice == computerChoice) {
 		return "Draw";
 	}
 
-	if( playerChoice == "Rock" && computerChoice == "Scissors || playerChoice == "Scissors && computerChoice == "Paper" || playerChoice == "Paper" && computerChoice == "Rock"){
+	if( playerChoice == "Rock" && computerChoice == "Scissors" || playerChoice == "Scissors" && computerChoice == "Paper" || playerChoice == "Paper" && computerChoice == "Rock"){
 		return "Player";
 	}
 	return "Computer";
@@ -22,13 +22,13 @@ std::string determineWinner( const std::string& playerchoice, const std::string&
 // pour rock: rock, Rock, RO, ro, R,r
 // pour scissors: scissors, Scissors, Sc, S, s
 // pour paper: Paper, paper, pa PA p, P
-bool isValidChoice(const stdd::string& choice){
-	return( choice == "Rock" || choice == "rock" choice == "ro" || choice == "RO" || choice == "Ro" ||choice == "r" || choice == "R" || choice == "Paper" || choice == "paper" || choice == "pa" choice == "Pa" || choice == "PA" || choice == "P" || choice == "p" || choice == "Scissors" || choice == "scissors" || choice ==  "Sc" || choice == "SC" choice == "S" || choice == "s") 
+bool isValidChoice(const std::string& choice){
+	return (choice == "Rock" || choice == "rock" || choice == "ro" || choice == "RO" || choice == "Ro" ||choice == "r" || choice == "R" || choice == "Paper" || choice == "paper" || choice == "pa" || choice == "Pa" || choice == "PA" || choice == "P" || choice == "p" || choice == "Scissors" || choice == "scissors" || choice ==  "Sc" || choice == "SC"|| choice == "sc" || choice == "S" || choice == "s");
 }
 
 
 //Convertit une entrée utilisateur en un choix standardisé ("Rock", "Paper", ou "Scissors").
-std::string convertInputTochoice(const std::string& input){
+std::string convertInputToChoice(const std::string& input){
 	if(input == "Paper" || input == "paper" || input == "PA" || input == "pa" || input == "Pa" ||  input == "P" || input == "p"){
 		return "Paper";
 	}

@@ -7,9 +7,10 @@
 #ifndef COMPUTER_AI_H
 #define COMPUTER_AI_H
 
+#include <iostream>
 #include <string>
 #include <cstdlib> // for random
-#include <ctime> // to ensure that avery random choices are diffrents every minutes
+#include <ctime> // to ensure that avery random choices are diffrent every minutes
 
 /*
 * Generate random choice for the computer

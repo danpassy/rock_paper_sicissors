@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name and version
+project(RockPaperScissors VERSION 1.0)
+
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Include directories
+include_directories(include)
+
+# Liste des fichiers sources principaux
+set(SOURCES
+    src/computer_ai.cpp
+    src/game_logic.cpp
+    src/player.cpp
+    src/score.cpp
+    src/utils.cpp
+)
+
+# Add main executable
+add_executable(RockPaperScissors main.cpp)
+target_sources(RockPaperScissors PRIVATE ${SOURCES})
+
+# Intégration de Google Test (via sous-module ou installation système)
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+enable_testing()
+
+# Liste des fichiers de test unitaire (sans extension .cpp)
+set(TEST_FILES 
+    test_computer_ai 
+    test_game_logic 
+    test_player 
+    test_score 
+    test_utils 
+)
+
+# Création automatique des exécutables de test et ajout à CTest
+foreach(test_file ${TEST_FILES})
+    add_executable(${test_file} tests/${test_file}.cpp)
+    target_link_libraries(${test_file} GTest::GTest GTest::Main pthread)
+    target_sources(${test_file} PRIVATE ${SOURCES})
+    gtest_discover_tests(${test_file})
+endforeach()
+
+# Cible pour exécuter tous les tests via ctest automatiquement après compilation.
+add_custom_target(run_tests ALL COMMAND ctest --output-on-failure DEPENDS ${TEST_FILES})
+
