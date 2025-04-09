@@ -1,6 +1,7 @@
-ComputerAITest.ReturnsValidChoices 1 0.00320425
-ComputerAITest.AllChoicesAppear 0 0
-ComputerAITest.NoFixedPattern 0 0
+ComputerAITest.ReturnsValidChoices 2 0.000766479
+ComputerAITest.AllChoicesAppear 1 0.0014945
+ComputerAITest.NoFixedPattern 1 0.0016205
+GameLogicTest.DetermineWinner 1 0.00138033
+GameLogicTest.IsValidChoice 1 0.00129992
+GameLogicTest.ConvertInputToChoice 1 0.00130708
 ---
-ComputerAITest.AllChoicesAppear
-ComputerAITest.NoFixedPattern
