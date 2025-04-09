@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RockPaperScissors",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RockPaperScissors::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RockPaperScissors-Release-8861f12c89485317d4af.json",
+					"name" : "RockPaperScissors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_tests-Release-cdf02e6c2a7f719e2744.json",
+					"name" : "run_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_computer_ai::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_computer_ai-Release-3b469aa029208e0d43fd.json",
+					"name" : "test_computer_ai",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_game_logic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_game_logic-Release-97d8794120d0eb079c41.json",
+					"name" : "test_game_logic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_player::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_player-Release-50b996c159b167fbd1ff.json",
+					"name" : "test_player",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_score::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_score-Release-ff26db43378e40601a45.json",
+					"name" : "test_score",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_utils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_utils-Release-bdaafd7b9203a48baf7b.json",
+					"name" : "test_utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors/build",
+		"source" : "/Users/danpassy/Desktop/C++/Project02/rock_paper_scissors"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
