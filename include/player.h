@@ -17,9 +17,10 @@ std::string getPlayerChoice();
 
 
 /*
-*Recupere le nom de l'utilisateur pour une nouvelle partie
+* Recupere le nom de l'utilisateur pour une nouvelle partie
 */
-std::string getPlayerName();
+std::string getPlayerName(); // Déclaration existante
+
 
 
 /*
