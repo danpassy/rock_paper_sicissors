@@ -6,10 +6,13 @@
 
 #include <iostream>
 #include <string>
-#include <game_logic.h>
-#include <player.h>
+#include "game_logic.h"
+#include "player.h"
+#include "utils.h"
 #include <algorithm> //( transform())
 #include <limits> // std::numeric_limits
+#include <sstream>
+
 
 /*
 * Demande et valide le choix du joueur 
@@ -22,10 +25,10 @@ std::string getPlayerChoice(){
 	
 		std::cout<<"Enter your choice ('Pa','Sc', 'Ro'): ";
 		std::cin>> choice;
-		// Tolower input choice 
-		std::transform(choice.begin(), choice.end(), choice.begin(), ::tolower);
+		// Utilisation de toLowerCase depuis utils.h
+        choice = toLowerCase(choice);
 	
-		if(isValidChoice){
+		if(isValidChoice(choice)){
 			return convertInputToChoice(choice);
 		}
 		std::cout << "⚠️ Invalid input! Valid options:\n"
@@ -37,11 +40,33 @@ std::string getPlayerChoice(){
 
 }
 
+/**
+* Récupère le nom du joueur pour une nouvelle partie
+* @return Nom du joueur saisi
+*/
+std::string getPlayerName() {
+    std::string name;
+    while(true) {
+        std::cout << "Entrez votre nom : ";
+        std::getline(std::cin, name);
+        
+        // Supprimer les espaces en début/fin
+        name.erase(name.find_last_not_of(" \t\n\r\f\v") + 1);
+        name.erase(0, name.find_first_not_of(" \t\n\r\f\v"));
+        
+        if(!name.empty()) {
+            return name;
+        }
+        std::cout << "⚠️ Le nom ne peut pas être vide !\n";
+    }
+}
+
+
 /*
 *Gère le tour du joueur ( affichage des messages, saisie, validation
 */
 std::string handlePlayerTurn(){
-	std::cout << "\---" <<getPlayerName << "'s Turn ---\n";
+	std::cout << "\n---" <<getPlayerName() << "'s Turn ---\n";
 	std::cout << " Choose: \n";
 	std::cout << " ✊🏿 Rock: 'Ro', 'Ro', 'RO', 'ro'\n ";
 	std::cout << " 📄 Paper: 'Pa', 'PA', 'pa', 'pA'\n";
@@ -55,42 +80,46 @@ std::string handlePlayerTurn(){
 */
 void displayPlayerTurnMessage(const std::string& playerName) {
     	std::cout << "\n===================================\n";
-   	std::cout << " 🎮  --- " << getPlayerName << "'s turn "<< std::endl;
+   	std::cout << " 🎮  --- " << playerName << "'s turn "<< std::endl;
     	std::cout << "===================================\n";
 }
 
-/*
-*Demande au joueur s'il veut continuer après une manche
+/**
+* Demande au joueur s'il veut continuer après une manche
+* @return Choix de l'utilisateur (1: Continuer, 2: Menu, 3: Quitter)
 */
-int askToContinue(){
-	int choice;
-	while(true){
-		std::cout << "\n----------------------------------\n";
-		std::cout << " What do you want to do next ?\n";
-		std::cout << "1. Continue the game\n";
-		std::cout << "2. Go back to main menu\n";
-		std::cout << "3. Exit the game\n";
-		std::cout << "\n----------------------------------\n";
-		std::cout << "Enter yout choice : ";
-		
-		std::cin >> choice;
-		
-		// Management of mistakes 
-		if(std::cin.fail()){
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'n');
-			std::cout << "⚠️ Error : Please enter an integer\n";	
-		}
-		else if( choice <1 || choice > 3){
-			std::cout << " ⚠️ Invalid choice : valid options 1,2 ou 3";
-		}
-		else {
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			return choice;
-		}
-	
-	}	
+int askToContinue() {
+    int choice;
+    while(true) {
+        std::cout << "\n----------------------------------\n";
+        std::cout << " Que souhaitez-vous faire ?\n";
+        std::cout << "1. Continuer la partie\n";
+        std::cout << "2. Retour au menu principal\n";
+        std::cout << "3. Quitter le jeu\n";
+        std::cout << "----------------------------------\n";
+        std::cout << "Votre choix : ";
+        
+        std::string input;
+        getline(std::cin, input); // Lecture de toute la ligne
+
+        // Vérification si l'entrée est un entier valide
+        if(input.empty() || !std::all_of(input.begin(), input.end(), ::isdigit)) {
+            std::cout << "⚠️ Erreur : Veuillez entrer un nombre entier\n";
+            continue;
+        }
+
+        std::stringstream ss(input);
+        ss >> choice;
+
+        // Validation du choix
+        if(choice < 1 || choice > 3) {
+            std::cout << "⚠️ Choix invalide : options valides 1, 2 ou 3\n";
+        } else {
+            return choice;
+        }
+    }
 }
+
 
 
 
